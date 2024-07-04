@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Verification Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="info-container">
+        <h3>We need some documents from you</h3>
+        <p>Please upload one document from each section below for verification.</p>
+    </div>
+
+    <div class="sections">
+        <div class="section">
+            <h3>Identity Verification</h3>
+            <ul>
+                <li>UK Passport (Not expired)</li>
+                <li>Non UK Passport</li>
+                <li>UK Photocard Driving Licence</li>
+            </ul>
+        </div>
+        <div class="section">
+            <h3>Nominated Account Verification</h3>
+            <ul>
+                <li>Bank Statement/Building Society Statement</li>
+            </ul>
+        </div>
+    </div>
+    <h2>Identity Verification</h2>
+
+    <div class="dropdown">
+        <label for="docType">Select Document Type:</label>
+        <select id="docType" name="docType">
+            <option value="">--Select Document Type--</option>
+            <option value="uk-passport">UK Passport (Not expired)</option>
+            <option value="non-uk-passport">Non UK Passport</option>
+            <option value="uk-photocard">UK Photocard Driving Licence</option>
+            <option value="bank-statement">Bank Statement/Building Society Statement</option>
+            
+
+        </select>
+    </div>
+
+    <form id="uploadForm" action="/upload" method="post" enctype="multipart/form-data">
+        <div class="drop-zone" id="drop-zone">
+            Drag and drop a file here or click to select a file
+        </div>
+        <input type="file" id="fileInput" name="file" accept=".pdf,.jpg,.jpeg,.png" style="display:none;">
+    </form>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
